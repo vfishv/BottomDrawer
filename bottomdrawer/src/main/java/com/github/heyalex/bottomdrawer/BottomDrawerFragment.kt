@@ -24,7 +24,7 @@ abstract class BottomDrawerFragment : androidx.fragment.app.DialogFragment(), Vi
     override fun onStart() {
         super.onStart()
         bottomDrawerDialog?.drawer?.viewTreeObserver?.addOnGlobalLayoutListener(this)
-        dialog.setOnDismissListener {
+        dialog?.setOnDismissListener {
             if (isAdded) {
                 dismissAllowingStateLoss()
             }
